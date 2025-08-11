@@ -1,25 +1,25 @@
-document.getElementById("registrationForm").addEventListener("submit", function(event){
-    event.preventDefault();
+document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let department = document.getElementById("department").value;
-    let year = document.getElementById("year").value;
-    let projectTitle = document.getElementById("projectTitle").value.trim();
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let event = document.getElementById("event").value;
+  let comments = document.getElementById("comments").value.trim();
+  let rating = document.querySelector('input[name="rating"]:checked');
 
-    // Validation
-    if(name === "" || email === "" || department === "" || year === "" || projectTitle === ""){
-        alert("Please fill all fields.");
-        return;
-    }
+  // Email regex check
+  let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-    // Email validation
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!emailPattern.test(email)){
-        alert("Please enter a valid email address.");
-        return;
-    }
+  if (!name || !email || !event || !comments || !rating) {
+    alert("Please fill all fields!");
+    return;
+  }
 
-    alert("Registration Successful");
-    document.getElementById("registrationForm").reset();
+  if (!email.match(emailPattern)) {
+    alert("Invalid email format!");
+    return;
+  }
+
+  alert("Thank you for your feedback!");
+  document.getElementById("feedbackForm").reset();
 });
