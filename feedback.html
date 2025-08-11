@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Registration Page</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Feedback Form</title>
+  <link rel="stylesheet" href="feedback.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>Student Registration</h2>
-    <form id="registrationForm">
-        <label>Name:</label>
-        <input type="text" id="name">
+  <div class="container">
+    <h2>Event Feedback</h2>
+    <form id="feedbackForm">
+      <label>Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
 
-        <label>Email:</label>
-        <input type="text" id="email">
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="Enter your email">
 
-        <label>Department:</label>
-        <select id="department">
-            <option value="">-- Select Department --</option>
-            <option value="CSE">CSE</option>
-            <option value="IT">IT</option>
-            <option value="AIDS">AIDS</option>
-            <option value="ECE">ECE</option>
-            <option value="EEE">EEE</option>
-            <option value="MECH">MECH</option>
-        </select>
+      <label>Event Name:</label>
+      <select id="event">
+        <option value="">Select event</option>
+        <option>Tech Fest</option>
+        <option>Workshop</option>
+        <option>Annual Day</option>
+      </select>
 
-        <label>Year:</label>
-        <select id="year">
-            <option value="">-- Select Year --</option>
-            <option value="1st">1st Year</option>
-            <option value="2nd">2nd Year</option>
-            <option value="3rd">3rd Year</option>
-            <option value="4th">4th Year</option>
-        </select>
+      <label>Rating:</label>
+      <div class="rating">
+        <label><input type="radio" name="rating" value="1"> 1</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5</label>
+      </div>
 
-        <label>Project Title:</label>
-        <input type="text" id="projectTitle">
+      <label>Comments:</label>
+      <textarea id="comments" placeholder="Your feedback..." rows="4"></textarea>
 
-        <button type="submit">Register</button>
+      <button type="submit">Submit</button>
     </form>
-</div>
+  </div>
 
-<script src="script.js"></script>
+  <script src="feedback.js"></script>
 </body>
 </html>
