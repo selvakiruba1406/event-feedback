@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", function() {
+  alert("Welcome to the Event Hub!");
+});
+
+// Background color change
+document.getElementById("colorBtn").addEventListener("click", function() {
+  document.body.style.backgroundColor =
+    "#" + Math.floor(Math.random() * 16777215).toString(16);
+});
+
+// Feedback form validation
 document.getElementById("feedbackForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -7,7 +18,6 @@ document.getElementById("feedbackForm").addEventListener("submit", function(e) {
   let comments = document.getElementById("comments").value.trim();
   let rating = document.querySelector('input[name="rating"]:checked');
 
-  // Email regex check
   let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
   if (!name || !email || !event || !comments || !rating) {
@@ -20,6 +30,10 @@ document.getElementById("feedbackForm").addEventListener("submit", function(e) {
     return;
   }
 
-  alert("Thank you for your feedback!");
+  let msg = document.createElement("p");
+  msg.textContent = "✅ Thank you for your feedback!";
+  msg.style.color = "green";
+  document.querySelector(".container").appendChild(msg);
+
   document.getElementById("feedbackForm").reset();
 });
