@@ -3,45 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event Feedback Form</title>
+  <title>Event Website</title>
   <link rel="stylesheet" href="feedback.css">
 </head>
 <body>
 
-  <div class="container">
-    <h2>Event Feedback</h2>
-    <form id="feedbackForm">
-      <label>Name:</label>
-      <input type="text" id="name" placeholder="Enter your name">
+  <!-- Navigation -->
+  <nav>
+    <h1>🎉 Event Hub</h1>
+    <ul>
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#feedback" class="nav-link">Feedback</a></li>
+    </ul>
+  </nav>
 
-      <label>Email:</label>
-      <input type="email" id="email" placeholder="Enter your email">
+  <!-- Home Section -->
+  <section id="home">
+    <header>
+      <h2 class="animated-text">Welcome to Our Event Hub!</h2>
+      <p>Your one-stop place to explore events and share your feedback.</p>
+      <button id="colorBtn">Click Me - Change Background</button>
+    </header>
+  </section>
 
-      <label>Event Name:</label>
-      <select id="event">
-        <option value="">Select event</option>
-        <option>Tech Fest</option>
-        <option>Workshop</option>
-        <option>Annual Day</option>
-      </select>
+  <!-- Feedback Section -->
+  <section id="feedback">
+    <div class="container">
+      <h2>Event Feedback</h2>
+      <form id="feedbackForm">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
 
-      <label>Rating:</label>
-      <div class="rating">
-        <label><input type="radio" name="rating" value="1"> 1</label>
-        <label><input type="radio" name="rating" value="2"> 2</label>
-        <label><input type="radio" name="rating" value="3"> 3</label>
-        <label><input type="radio" name="rating" value="4"> 4</label>
-        <label><input type="radio" name="rating" value="5"> 5</label>
-      </div>
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
 
-      <label>Comments:</label>
-      <textarea id="comments" placeholder="Your feedback..." rows="4"></textarea>
+        <label>Event Name:</label>
+        <select id="event">
+          <option value="">Select event</option>
+          <option>Tech Fest</option>
+          <option>Workshop</option>
+          <option>Annual Day</option>
+        </select>
 
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+        <label>Rating:</label>
+        <div class="rating">
+          <label><input type="radio" name="rating" value="1"> 1</label>
+          <label><input type="radio" name="rating" value="2"> 2</label>
+          <label><input type="radio" name="rating" value="3"> 3</label>
+          <label><input type="radio" name="rating" value="4"> 4</label>
+          <label><input type="radio" name="rating" value="5"> 5</label>
+        </div>
+
+        <label>Comments:</label>
+        <textarea id="comments" placeholder="Your feedback..." rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
 
   <script src="feedback.js"></script>
 </body>
 </html>
-
