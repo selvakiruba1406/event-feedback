@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event Website</title>
+  <title>Event Hub & Profile Cards</title>
   <link rel="stylesheet" href="feedback.css">
 </head>
 <body>
@@ -14,6 +14,7 @@
     <ul>
       <li><a href="#home" class="nav-link">Home</a></li>
       <li><a href="#feedback" class="nav-link">Feedback</a></li>
+      <li><a href="#cards" class="nav-link">Profile Cards</a></li>
     </ul>
   </nav>
 
@@ -62,6 +63,18 @@
     </div>
   </section>
 
+  <!-- Profile Cards Section -->
+  <section id="cards">
+    <h1>Interactive Profile Cards</h1>
+    <div class="buttons">
+      <button id="createCardBtn">Create Card</button>
+      <button id="addProfileBtn">Add Profile</button>
+    </div>
+    <div id="cardContainer" class="card-container"></div>
+  </section>
+
+  <!-- Scripts -->
   <script src="feedback.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
